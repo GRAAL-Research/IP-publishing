@@ -1,6 +1,0 @@
-[Unit]
-Description=Updating IP address of a server
-
-[Service]
-Type=simple
-ExectStart=/usr/local/bin/send-ip.sh
