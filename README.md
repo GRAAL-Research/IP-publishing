@@ -7,7 +7,7 @@ Instruction and code to publish your server IP address on reboot.
 sudo cp system/* /etc/systemd/system/
 sudo cp send-ip.sh /usr/local/bin/send-ip.sh
 sudo mkdir $HOME/.myips/
-sudo touch '$HOME/.myips/$(hostname).txt'
+sudo touch $HOME/.myips/$(hostname).txt
 ```
 2. After install the webhook application on Slack run the following command by replacing the `{url}` by the url given by Slack.
 ```
