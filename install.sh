@@ -1,10 +1,12 @@
 #!/bin/bash
 # Taking in argument the webhook url
 
-if [ -z "$1" ]; then
+if [ -z "$(command -v curl)" ]; then
+    echo "Error: curl must be installed before installation."
+elif [ -z "$1" ]; then
     echo "Error: Missing url argument."
 elif ! [ $(id -u) = 0 ]; then
-    echo "You must run the script as root."
+    echo "Error: You must run the script as root."
 else
     cp system/* /etc/systemd/system/
     cp send-ip.sh /usr/local/bin/send-ip.sh
