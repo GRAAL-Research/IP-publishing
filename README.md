@@ -11,5 +11,5 @@ sudo touch $HOME/.myips/$(hostname).txt
 ```
 2. After install the webhook application on Slack run the following command by replacing the `{url}` by the url given by Slack.
 ```
-sudo sed -i "s|{WEBHOOK_LINK}|{url}|" /usr/local/bin/send-ip.sh
+sudo tee /usr/local/etc/send-ip < {url}
 ```
