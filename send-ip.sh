@@ -1,5 +1,5 @@
 #!/bin/bash
-IP_FILE=$(/var/local/send-ip.txt)
+IP_FILE=/var/local/send-ip.txt
 
 ACTUAL_IP=$(hostname -I | awk '{print $1}')
 PREVIOUS_IP=$(cat "$IP_FILE")
