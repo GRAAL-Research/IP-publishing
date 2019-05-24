@@ -4,7 +4,7 @@ Instruction and code to publish your server IP address on reboot.
 # Automatic installation
 Run the following command by replacing `{URL}` by the web hook url from Slack for an automatic installation :
 ```
-source send-ip-installation.sh {URL}
+sh send-ip-installation.sh {URL}
 ```
 
 # Manual installation
