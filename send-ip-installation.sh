@@ -1,13 +1,17 @@
 #!/bin/bash
 # Taking in argument the webhook url
 
-sudo cp system/* /etc/systemd/system/
-sudo cp send-ip.sh /usr/local/bin/send-ip.sh
-sudo touch /var/local/send-ip.txt
-sudo chmod g+w /var/local/send-ip.txt
+if [ -z "$1" ]; then
+    echo "Error: Missing url argument."
 
-echo $1 |sudo tee /usr/local/etc/send-ip 1>/dev/null
+else
+    cp system/* /etc/systemd/system/
+    cp send-ip.sh /usr/local/bin/send-ip.sh
+    touch /var/local/send-ip.txt
+    chmod g+w /var/local/send-ip.txt
 
-sudo systemctl start send-ip.service
-sudo systemctl enable send-ip.timer
+    echo $1 /usr/local/etc/send-ip
 
+    systemctl start send-ip.service
+    systemctl enable send-ip.timer
+fi
