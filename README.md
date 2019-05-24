@@ -6,3 +6,10 @@ Run the following command by replacing `{URL}` by the web hook url from Slack fo
 ```
 sudo sh send-ip-installation.sh {URL}
 ```
+
+# Automatic uninstallation
+Run the following command to uninstall :
+
+```
+sudo sh send-ip-uninstall.sh
+```
