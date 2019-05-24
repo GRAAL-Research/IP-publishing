@@ -1,7 +1,7 @@
 #!/bin/bash
 IP_FILE=/var/local/send-ip.txt
 
-ACTUAL_IP=$(hostname -I | awk '{print $1}')
+ACTUAL_IP=$(ip route get 8.8.8.8 | tr -s ' ' | cut -d' ' -f7)
 PREVIOUS_IP=$(cat "$IP_FILE")
 
 if [[ $ACTUAL_IP != $PREVIOUS_IP ]] || [[ -z "$PREVIOUS_IP" ]]; then
