@@ -4,7 +4,7 @@ Instruction and code to publish your server IP address on reboot.
 # Automatic installation
 Run the following command for an automatic installation :
 ```
-sudo source send-ip-installation.sh
+source send-ip-installation.sh
 ```
 
 # Manual installation
@@ -24,6 +24,6 @@ echo {url} |sudo tee /usr/local/etc/send-ip 1>/dev/null
 3. Do the following command to start and enable the systemd
 ```
 sudo systemctl start send-ip.service
-sudo systemctl enabled send-ip.timer
+sudo systemctl enable send-ip.timer
 ```
 
