@@ -1,5 +1,5 @@
 # IP-publishing
-Instruction and code to publish your server IP address on reboot.
+Instruction and code to publish your server IP address on reboot on Slack.
 
 # Automatic installation
 Run the following command by replacing `{URL}` by the web hook url from Slack for an automatic installation :
